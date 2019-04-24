@@ -1,0 +1,13 @@
+{% extends "single.twig" %}
+
+{% block navbar %}
+
+    <div class="bg-dark-green">
+        <div class="container">
+            {% filter shortcodes %}
+                [audio src="{{ podcast_src }}"]
+            {% endfilter %}
+        </div>
+    </div>
+
+{% endblock %}

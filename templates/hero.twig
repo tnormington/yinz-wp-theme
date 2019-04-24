@@ -1,0 +1,16 @@
+<div class="hero">
+    <div class="hero-slider" id="hero-slider-root" style="background-image: url('{{theme.link}}/assets/img/hero-bg@2x.png')">
+        {% for slide in post.get_field('slide') %}
+            <div class="slide mb-5 mt-5 text-center">
+                <div class="container">
+                    <h1 class="display-4">{{slide.title}}</h1>
+                    <h4 class="font-italic">{{slide.sub_title}}</h4>
+                    {% if slide.has_button %}
+                        <a class="btn btn-primary mt-3" href="{{slide.button_url}}">{{slide.button_text}}</a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <img class="hero-skyline" src="{{theme.link}}/assets/img/skyline.png">
+</div>

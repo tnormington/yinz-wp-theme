@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="97.6564749%" y1="18.9168121%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#216684" offset="0%"></stop>
+            <stop stop-color="#203A43" offset="49.7021476%"></stop>
+            <stop stop-color="#0F2027" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="9.13258999 81.455281 28.8303931 57.8925361 7.08341889 16.107774 33.3586752 2.11424336 45.2650505 0 51.9587401 27.7773398 66.8060304 6.66134539 80.6852826 4.16933451 93.5457835 16.107774 49.1551545 90.2456578 27.8264518 99.840415"></polygon>
+        <linearGradient x1="100%" y1="22.6591338%" x2="0%" y2="84.891461%" id="linearGradient-4">
+            <stop stop-color="#FFDC60" offset="0%"></stop>
+            <stop stop-color="#E6A400" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="Combined-Shape" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"></use>
+            <path d="M80.1674224,18.6188888 L63.8250349,4.11429801 L78.3065402,-0.417207349 L95.9140757,15.3125566 L66.5343455,60.8112231 L51.4040396,93.3991047 L26.1130441,101.604872 L80.1674224,18.6188888 Z M42.8315029,39.5596595 L31.3112826,-3.45997755 L47.6274937,-8.13704497 L51.6670777,27.3641844 L42.8315029,39.5596595 Z" id="Combined-Shape" fill="url(#linearGradient-4)" mask="url(#mask-3)"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,30 @@
+.hero
+  position: relative
+
+.hero-slider
+  background-size: cover
+  background-repeat: no-repeat
+  border-bottom: 2px solid $light-yellow
+  max-height: 0
+  transition: all 1s $ease-out-expo
+  // padding-bottom: 8rem
+  h1, h2, h3, h4
+    color: $light-yellow
+    text-shadow: 2px 2px 4px rgba(black, 0.5)
+  .slide
+    opacity: 0
+    transition: all 0.25s ease-out
+    transition-delay: 0.5s
+    padding: 4rem 0
+  &.slick-initialized
+    // max-height: 50vh
+    max-height: 100vh
+    .slide
+      opacity: 1
+
+.hero-skyline
+  display: none
+  position: absolute
+  left: 0
+  bottom: 0
+  pointer-events: none

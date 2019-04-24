@@ -1,0 +1,19 @@
+<img class="footer__logo mb-3" src="{{theme.link}}/assets/img/yinz-logo.svg">
+
+{% include "partial/social-links.twig" %}
+
+<div class="footer__bar">
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div>
+                {{site.name}}
+                &copy;
+                {{"now"|date('Y')}}
+            </div>
+            <div>
+                Built by
+                <a href="https://tjn.io" target="_blank">TJN</a>
+            </div>
+        </div>
+    </div>
+</div>

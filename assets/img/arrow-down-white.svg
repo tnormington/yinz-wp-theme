@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-down-white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="arrow-down-white" fill="#FFFFFF">
+            <path d="M14.6006945,21.3495779 L5.09464641,8.54015633 C4.98301205,8.39225564 4.97013135,8.26525587 5.05600394,8.15915321 C5.14187653,8.05305054 5.29644487,8 5.5197136,8 L24.4802864,8 C24.7035551,8 24.8581235,8.05305054 24.9439961,8.15915321 C25.0298686,8.26525587 25.016988,8.39225564 24.9053536,8.54015633 L15.3993055,21.3495779 C15.2876712,21.4974786 15.1545707,21.5714279 15,21.5714279 C14.8454293,21.5714279 14.7123288,21.4974786 14.6006945,21.3495779 Z" id="play---FontAwesome"></path>
+        </g>
+    </g>
+</svg>

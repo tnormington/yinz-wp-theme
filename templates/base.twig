@@ -1,0 +1,74 @@
+{% block before_header %}{% endblock %}
+
+{% block html_head_container %}
+    {% include 'html-header.twig' %}
+    {% block head %}{% endblock %}
+</head>
+{% endblock %}
+
+<body class="{{body_class}}" data-template="base.twig">
+<header class="header">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{site.url}}">
+                <img src="{{theme.link}}/assets/img/yinz-y.svg" alt="Yinz Y"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    {% include "menu.twig" with {
+                        'menu' : menu.get_items
+                    } %}
+                </ul>
+            </div>
+        </div>
+        <div class="navbar__bottom">
+            {% block navbar %}{% endblock %}
+        </div>
+    </nav>
+</header>
+
+{% block hero %}{% endblock %}
+
+<section id="content" role="main" class="content">
+    {% block full_width_above %}{% endblock %}
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row">
+                {% if block('sidebar') %}
+                    <div class="col-lg-7 col-md-12">
+                    {% else %}
+                        <div class="col-12">
+                        {% endif %}
+
+                        {% if title %}
+                            <h1>{{title}}</h1>
+                        {% endif %}
+                        {% block content %}
+                            Sorry, no content
+                        {% endblock %}
+                    </div>
+
+                    {% if block('sidebar') %}
+                        <div class="col-lg-5 col-md-12">
+                            {% block sidebar %}{% endblock %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% block full_width_below %}{% endblock %}
+    </section>
+
+    {% block footer %}
+        <footer id="footer" class="footer">
+            {% include 'footer.twig' %}
+        </footer>
+        {{ function('wp_footer') }}
+    {% endblock %}
+</body>
+
+</html>

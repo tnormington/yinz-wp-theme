@@ -1,0 +1,9 @@
+{% if menu %}
+    <ul class="sub-menu">
+        {% for item in menu %}
+            <li class="sub-menu__item {{ item.classes | join(' ') }}">
+                <a class="sub-menu__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

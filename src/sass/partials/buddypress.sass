@@ -1,0 +1,158 @@
+// MENUS
+  
+.buddypress-wrap .bp-navs
+  // ACTIVE ITEM
+  li.current a,
+  li.current a:focus,
+  li.current a:hover,
+  li.selected a,
+  li.selected a:focus,
+  li.selected a:hover
+    background: $light-yellow
+    color: $dark-green
+  // HOVER
+  li:not(.current) a:focus,
+  li:not(.current) a:hover,
+  li:not(.selected) a:focus,
+  li:not(.selected) a:hover
+    background: $dark-yellow
+    color: #fff
+
+  
+// desktop
+@media screen and (min-width: 46.8em)
+  .buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links)
+    box-shadow: none
+    border-top: none
+    border-bottom-color: $light-yellow
+  .buddypress-wrap .main-navs:not(.dir-navs) li.current a,
+  .buddypress-wrap .main-navs:not(.dir-navs) li.selected a,
+  .buddypress-wrap .bp-subnavs li.current a,
+  .buddypress-wrap .bp-subnavs li.selected a
+    background: $light-yellow
+    color: $dark-green
+
+
+
+// mobile
+@media screen and (max-width: 46.8em)
+  .buddypress-wrap:not(.bp-single-vert-nav) .bp-navs li
+    background: $light-green
+  .buddypress-wrap .single-screen-navs li
+    border: none
+  
+
+
+// COVER PHOTO
+#buddypress #header-cover-image
+  background-image: url('../../assets/img/main-content.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+
+
+
+// LISTS
+.activity-list.bp-list
+  background: $med-green
+  border: none
+  > li,
+  .activity-item
+    border: none
+    box-shadow: 0 1px 3px rgba(black, 0.15)
+    background: lighten($med-green, 4)
+    color: #fff
+    .activity-content 
+      .activity-inner,
+      .activity-header,
+      .comment-header
+        color: #fff
+      .activity-inner
+        background-color: darken($med-green, 4)
+        box-shadow: 0 1px 3px rgba(black, 0.15)
+
+// ACTIVITY UPDATE
+.activity-update-form
+  border: $med-green
+  box-shadow: none
+  padding: 0
+  #whats-new-textarea textarea
+    background: $med-green
+    color: #fff
+    border: none
+    padding: 0.375rem 0.75rem
+    box-shadow: 0 1px 3px rgba(black, 0.15)
+
+
+// INFO BOX
+.buddypress-wrap .bp-feedback
+  background: $light-green
+  padding: 10px
+  color: #fff
+  &.help,
+  &.info
+    .bp-icon
+      background: lighten($light-green, 10)
+      width: 40px
+      height: 40px
+      display: flex
+      align-items: center
+      justify-content: center
+  &:not(.custom-homepage-info)
+    align-items: center
+
+
+
+// WARNING
+#buddypress p.warning
+  background: $dark-yellow
+  color: #fff
+  text-align: center
+
+// DRAG DROP
+.drag-drop .drag-drop-inside
+  .drag-drop-info
+    font-size: 150%
+    color: #fff
+    margin-bottom: 1rem
+
+
+
+// TABLES
+.buddypress-wrap
+  .bp-tables-user tbody tr,
+  table.forum tbody tr,
+  table.wp-profile-fields tbody tr
+    background: $light-green
+    td.label
+      border-right-color: $med-green
+
+// SEARCH
+.subnav-search
+  display: flex
+  align-items: center
+
+
+// FORMS
+.buddypress-wrap 
+  form.bp-dir-search-form,
+  form.bp-invites-search-form,
+  form.bp-messages-search-form,
+  .select-wrap
+    border-color: $med-green
+
+.buddypress-wrap select
+  color: #fff
+
+.register-section
+  input:not([type="radio"])
+    margin-bottom: 1rem
+  .radio
+    label
+      display: inline-flex
+      align-items: center
+      margin-right: 1rem
+      input
+        margin-right: 10px
+        flex: 0
+        width: auto !important

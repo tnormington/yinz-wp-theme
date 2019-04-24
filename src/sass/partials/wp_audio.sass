@@ -1,0 +1,19 @@
+body
+  .mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body
+    background: $dark-green
+  .mejs-time-float
+    top: calc(100% + 10px)
+    bottom: auto
+    &-corner
+      display: none
+  .mejs-play>button
+    width: 25px
+    background: url('../../assets/img/play-yellow.svg') center center / cover no-repeat
+  .mejs-controls 
+    padding: 0
+    .mejs-time-rail .mejs-time-current
+      background: $grad-yellow
+  .wp-audio-shortcode
+    display: none
+    &.mejs-audio
+      display: block

@@ -1,0 +1,37 @@
+body, html
+  margin: 0 !important
+  padding: 0
+  min-height: calc(100vh - #{$topbar-h})
+
+body
+  padding-top: $navbar-mobile-h
+  &.single-podcast
+    padding-top: $navbar-mobile-h + $audio-h
+  @media (min-width: 576px)
+    padding-top: $navbar-h
+    &.single-podcast
+      padding-top: $navbar-h + $audio-h
+
+  
+
+body
+  display: flex
+  flex-direction: column
+  .content
+    flex: 1
+
+
+.content-wrapper
+  padding-top: 2rem
+
+.navbar__bottom 
+  position: absolute
+  left: 0
+  top: 100%
+  width: 100%
+  z-index: -1
+
+// center title on contact page
+.page-id-34
+  .article-h1 
+    text-align: center

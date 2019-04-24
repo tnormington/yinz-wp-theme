@@ -1,0 +1,40 @@
+<div class="media mb-3">
+    <img class="comment-author-avatar shadow mr-3 rounded-circle" src="{{comment.avatar}}" alt="Avatar of {{comment.author.name}}">
+    <div class="media-body">
+        <div class="d-flex align-items-center justify-content-start">
+            <h5 class="comment-author m-0 mr-3">{{comment.author.name}}</h5>
+            <small class="text-muted">Posted
+                {{ comment.comment_date|time_ago }}</small>
+        </div>
+        <div class="blog-comment {{comment.comment_type}}" id="blog-comment-{{comment.ID}}">
+            <div class="comment-content">{{comment.comment_content|wpautop}}</div>
+
+            <section class="comment-box">
+                <!-- child comments -->
+                {% if comment.children %}
+                    <div>
+                        <h4>Replies</h4>
+                        {% for cmt in comment.children %}
+                            {% include "comment.twig" with {
+                                comment : cmt
+                            } %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+            </section>
+        </div>
+        <div class="media-footer">
+            <a class="btn btn-outline-success btn-icon btn-icon-reply btn-sm" data-toggle="collapse" href="#replyToggle-{{loop.index}}-{{comment.comment_parent}}" role="button" aria-expanded="false" aria-controls="replyToggle-{{loop.index}}-{{comment.comment_parent}}"></a>
+            <!-- comment form -->
+            <div class="collapse" id="replyToggle-{{loop.index}}-{{comment.comment_parent}}">
+                <div class="card bg-dark-green text-white mt-3">
+                    <div class="card-body">
+                        {% include "comment-form.twig" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

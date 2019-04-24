@@ -1,0 +1,23 @@
+.footer
+  // background-color: lighten($dark-green, 10)
+  padding-top: 3rem
+  color: #fff
+  &__logo 
+    max-width: 300px
+    margin: 0 auto
+    display: block
+  &__bar
+    background-image: linear-gradient(to right, $dark-green 0%, $med-green 100%)
+    padding: 8px 0
+    margin-top: 3rem
+    font-size: 13px
+    position: relative
+    &:before
+      height: 2px
+      display: block
+      content: ''
+      width: 100%
+      position: absolute
+      bottom: 0
+      left: 0
+      background: $grad-yellow

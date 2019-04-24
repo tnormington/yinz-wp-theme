@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block before_header %}
+    {{ fn('acf_form_head') }}
+{% endblock %}
+
+{% block content %}
+    <div class="content-wrapper">
+        <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+            <section class="article-content">
+                <h1 class="article-h1">{{post.title}}</h1>
+                <div class="article-body">
+                    {% if user %}
+                        {{post.post_content}}
+                        <div id="contribute-form">
+                            {{ form }}
+                            </div>
+                        {% else %}
+                            <p>You must be signed in to contribute content.</p>
+                            <a class="btn btn-primary" href="/register">Sign Up</a>
+                            or
+                            <a class="btn btn-secondary" href="{{ fn('wp_login_url', post.link) }}">Login</a>
+                        {% endif %}
+                    </div>
+                </section>
+            </article>
+        </div>
+        <!-- /content-wrapper -->
+    {% endblock %}

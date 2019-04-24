@@ -1,0 +1,54 @@
+{% extends "base.twig" %}
+{% block hero %}
+    {% include "hero.twig" %}
+{% endblock %}
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-8">
+            <h2 class="mb-5">Latest Content</h2>
+            <div class="masonry-grid">
+                {% for post in latest_content %}
+                    <div class="masonry-grid-item">
+                        {% include 'tease.twig' %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2 class="mb-5">Highlights</h2>
+            {% for post in highlights %}
+                <div>
+                    <h4>
+                        <a href="{{fn('get_permalink', post.ID) }}">{{ post.post_title}}</a>
+                    </h4>
+                    <div class="text-muted">{{post.date|time_ago}}</div>
+                    <p>{{post.post_content|truncate(12)}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 text-center">
+            <div class="pt-5 pb-5">
+                <div class="card p-4 bg-success shadow">
+                    <div class="card-body">
+                        {{post.content}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block full_width_below %}
+    <div class="full-width-front">
+        <div class="bg-yellow shadow p-4 text-center full-width-front__card">
+            <h3 class="mb-4">Interested In Contributing?</h3>
+            <p>Create an account to contribute content. I promise, we won’t send you any spam.</p>
+            <a class="btn btn-secondary" href="/register">Sign Up!</a>
+        </div>
+    </div>
+{% endblock %}

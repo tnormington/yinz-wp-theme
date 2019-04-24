@@ -1,0 +1,55 @@
+#wpadminbar
+  background-image: linear-gradient(to right, $dark-green 0%, $med-green 100%)
+  box-shadow: 0 0 5px rgba(black, 0.20)
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    height: 2px
+    width: 100%
+    background: $grad-yellow
+    z-index: 999999
+  @media (max-width: 600px)
+    position: fixed
+
+
+#wp-toolbar
+  display: flex
+  justify-content: flex-end
+  
+  
+// hide the WP logo
+#wp-admin-bar-wp-logo
+  display: none !important
+  
+
+// ensure the login & register buttons are always visible
+body
+  #wp-admin-bar-bp-login,
+  #wp-admin-bar-bp-register,
+    display: block !important
+    a
+      padding: 0 8px 0 7px !important
+
+
+// Adjust the hover styles
+#wpadminbar .ab-top-menu>li.hover>.ab-item,
+#wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item, 
+#wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus
+  background: $med-green
+
+// sub menu styles
+#wpadminbar 
+  .menupop .ab-sub-wrapper,
+  .quicklinks .menupop ul.ab-sub-secondary,
+  .quicklinks .menupop ul.ab-sub-secondary .ab-submenu
+    background: darken($med-green, 5)
+
+// Make avatar round
+#wpadminbar #wp-admin-bar-my-account.with-avatar>.ab-empty-item img,
+#wpadminbar #wp-admin-bar-my-account.with-avatar>a img,
+#wp-admin-bar-user-info img.avatar
+  border-radius: 50%
+  border: none

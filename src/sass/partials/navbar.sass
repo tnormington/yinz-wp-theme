@@ -1,0 +1,154 @@
+body .navbar
+  background-image: linear-gradient(to right, $med-green 0%, $light-green 100%)
+  padding: 0
+  box-shadow: 0 1px 8px rgba(black, 0.35)
+  .navbar-nav .nav-link
+    padding: 0.75rem
+    &:hover
+      color: $light-yellow
+  &.fixed-top
+    top: $topbar-h
+    @media (max-width: 782px)
+      top: $topbar-mobile-h
+  &-brand
+    @media (max-width: 782px)
+      margin-left: 10px
+    img
+      max-width: 36px
+
+.navbar-dark .navbar-nav
+  .nav-link 
+    color: #fff
+
+
+$navbar-breakpoint: 767px
+
+.navbar-nav
+  .nav-item
+    position: relative
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 0
+      background: $dark-yellow
+      transition: all 0.15s ease-out
+      @media (max-width: $navbar-breakpoint)
+        height: 100%
+        width: 0
+    &.active
+      .nav-link
+        color: $dark-yellow
+      &:before
+        height: 4px
+        @media (max-width: $navbar-breakpoint)
+          height: 100%
+          width: 4px
+    &:hover
+      .sub-menu-toggler
+        transform: rotateX(180deg)
+      &:before
+        height: 4px
+        background: $light-yellow
+        @media (max-width: $navbar-breakpoint)
+          height: 100%
+          width: 4px
+
+.navbar-nav .nav-item
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin-right: 1rem
+  @media (max-width: $navbar-breakpoint)
+    margin-right: 0
+    .nav-link
+      flex: 1
+  .sub-menu-toggler
+    background: transparent
+    width: 35px
+    height: 35px
+    outline: none
+    border: 1px solid transparent
+    display: inline-block
+    // margin-left: 8px
+    transition: all 0.15s ease-out 
+
+.navbar-nav .sub-menu
+  position: absolute
+  top: 100%
+  left: 0
+  transition: all 0.15s $ease-out-expo
+  transform-origin: top
+  transform: rotateX(90deg)
+  padding: 0
+  margin: 0
+  flex: 1 0 100%
+  @media (max-width: $navbar-breakpoint) 
+    position: relative
+    max-height: 0
+    top: 0
+    
+.nav-item:hover
+  .sub-menu
+    transform: rotateX(0deg)
+    @media (max-width: $navbar-breakpoint) 
+      max-height: 50vh
+
+.navbar-toggler
+  margin: 0.75rem
+
+
+.sub-menu
+  background-color: $med-green
+  box-shadow: 0 1px 5px rgba(black, 0.3)
+  &__item
+    list-style-type: none
+  &__link
+    padding: 10px 18px 10px 22px
+    display: block
+    font-size: 14px
+    text-transform: uppercase
+    white-space: nowrap
+    position: relative
+    &:before,
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+    &:before
+      transition: all 0.25s $ease-out-expo 0.1s
+      height: 100%
+      width: 0
+      background-image: linear-gradient(to right, $light-green 0%, $med-green 100%)
+    &:after
+      transition: all 0.15s $ease-out-expo
+      background: $light-yellow
+      width: 4px
+      height: 0
+      top: auto
+      bottom: 0
+    &:hover
+      text-decoration: none
+      color: #fff
+      &:before
+        width: 100%
+      &:after 
+        height: 100%
+
+
+.sub-menu__item
+  &.icon a
+    padding-left: 50px
+    background-position: 18px center
+    background-size: 20px auto
+    background-repeat: no-repeat
+  &.youtube a
+    background-image: url('../../assets/img/youtube.svg')
+  &.twitch a
+    background-image: url('../../assets/img/twitch.svg')

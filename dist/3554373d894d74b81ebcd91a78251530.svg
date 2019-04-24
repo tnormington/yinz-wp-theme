@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>play-yellow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="play-yellow" fill="#FFDC60">
+            <path d="M24.7633929,15.3621655 L7.71875,24.8342637 C7.52194842,24.9454994 7.3529583,24.9583341 7.21177455,24.8727682 C7.07059081,24.7872023 7,24.633186 7,24.4107146 L7,5.5178575 C7,5.29538615 7.07059081,5.14136983 7.21177455,5.05580393 C7.3529583,4.97023802 7.52194842,4.98307272 7.71875,5.09430839 L24.7633929,14.5664066 C24.9601944,14.6776423 25.0585938,14.8102674 25.0585938,14.9642861 C25.0585938,15.1183047 24.9601944,15.2509299 24.7633929,15.3621655 Z" id="play---FontAwesome"></path>
+        </g>
+    </g>
+</svg>
